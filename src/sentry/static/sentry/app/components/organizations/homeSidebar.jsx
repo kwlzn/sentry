@@ -90,9 +90,10 @@ const HomeSidebar = React.createClass({
                 <li><a href={`/organizations/${orgId}/auth/`}>{t('Auth')}</a></li>}
               {access.has('org:admin') &&
                 features.has('api-keys') &&
-                <li>
-                  <a href={`/organizations/${orgId}/api-keys/`}>{t('API Keys')}</a>
-                </li>}
+                <ListLink to={`/organizations/${orgId}/api-keys/`}>
+                  {t('API Keys')}
+                </ListLink>}
+
               {access.has('org:write') &&
                 <ListLink to={`/organizations/${orgId}/audit-log/`}>
                   {t('Audit Log')}
