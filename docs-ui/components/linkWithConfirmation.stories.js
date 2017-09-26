@@ -6,9 +6,9 @@ import {withInfo} from '@storybook/addon-info';
 import LinkWithConfirmation from 'sentry-ui/linkWithConfirmation';
 
 // eslint-disable-next-line
-storiesOf('LinkWithConfirmation', module).add(
+storiesOf('Confirm/LinkWithConfirmation', module).add(
   'default',
-  withInfo('A link that opens a confirmation modal.')(() => (
+  withInfo('A link (<a>) that opens a confirmation modal.')(() => (
     <div>
       <LinkWithConfirmation
         message="Message"
